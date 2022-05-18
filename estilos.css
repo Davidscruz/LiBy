@@ -422,17 +422,13 @@ body {
 
   .user_options{
     background-color: #00064d;
-    display: inline-block;
-    align-items: center;
-    justify-content: left;
-    flex-direction: column;
     padding: 10px 50px 20px;
     width: 140px;
-    height: 400px;
+    height: 500px;
+    flex-direction: row-reverse;
   }
 
   .user_options a{
-    display: flex;
     text-decoration: none;
     color: #fefefe;
     font-size: 20px;
@@ -451,7 +447,65 @@ body {
     border-radius: 40px;
     color: rgb(64, 0, 238);
     padding: 10px 50px 20px;
-    min-height: 600px;
-    width: 1000px;
-    display: inline-block;
+    height: 500px;
+    width: 900px;
+    margin-left: 200px;
+    margin-top: -250px;
+    vertical-align: middle;
+  }
+
+  .window__profile img {
+    width: 250px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .window__profile div {
+    text-decoration: none;
+    font-size:30px;
+    font-family: "Mulish", sans-serif;
+    color: #00064d;
+  }
+
+  .window__profile ul {
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+  }
+
+  .window__profile ul,
+  ul:hover {
+    display: block;
+  }
+
+  .window__profile li {
+    margin: 10px 0px;
+    color: #00064d;
+    cursor: pointer;
+  }
+
+  .window h1 {
+    margin-left: 350px;
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    margin-top: -200px;
+    cursor: pointer;
+  }
+
+  .window h2 {
+    margin-left: 350px;
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .window h3 {
+    margin-left: 350px;
+    font-family: "Mulish", sans-serif;
+    font-size: 30px;
+    cursor:pointer;
   }
