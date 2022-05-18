@@ -454,6 +454,11 @@ body {
     vertical-align: middle;
   }
 
+  .window__profile{
+    background-color: white;
+    width: 300px;
+  }
+
   .window__profile img {
     width: 250px;
     margin-top: 40px;
@@ -508,4 +513,28 @@ body {
     font-family: "Mulish", sans-serif;
     font-size: 30px;
     cursor:pointer;
+  }
+
+  .libros {
+    background-color: white;
+    width: 150px;
+  }
+
+  .libros div {
+    background-color: white;
+    width: 150px;
+  }
+
+  .libros img {
+    height: 200px;
+    width:150px;
+  }
+
+  .window::-webkit-scrollbar {
+    width: 7px;
+    background-color: #00064d;
+  }
+
+  .window::-webkit-scrollbar-thumb {
+    background: #ff9d00;
   }
