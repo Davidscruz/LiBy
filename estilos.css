@@ -10,6 +10,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+
   }
   .header__img {
     width: 150px;
@@ -27,57 +29,49 @@ body {
   }
   .header__menu {
     margin-right: 30px;
-    vertical-align: middle;
+    flex-direction: row;
+    display: inline-flex;
+    margin-left: 20px;
+    color: #fefefe;
   }
-  .header__menu ul {
-    display: none;
+
+  .header__menu ul,ol {
     list-style: none;
-    padding: 0px;
-    position: absolute;
-    width: 100px;
-    text-align: right;
-    margin: 0px 0px 0px -14px;
   }
-  .header__menu:hover ul,
-  ul:hover {
-    display: block;
-    
-  }
-  .header__menu li {
-    margin: 10px 0px;
-  }
-  .header__menu li a {
-    color: white;
+
+  .menu_options li a {
+    color: #fefefe;
     text-decoration: none;
-  }
-  .header__menu li a:hover {
-    text-decoration: underline;
+    padding: 10px 15px;
+    display: block;
   }
 
-  .header__shoppingcar {
-    margin-right: 8px;
-    display: flex;
+  .menu_options img {
+    width: 50px;
+    margin-top: 20px;
+  }
+
+  .menu_options li a:hover {
+    background-color:#ff9d00;
+  }
+
+  .menu_options > li {
+    float: left;
+  }
+
+  .menu_options li ul {
+    display: none;
+    position: absolute;
+    min-width: auto;
     vertical-align: middle;
+
   }
 
-  .header__shoppingcar img {
-    margin-right: 8px;
-    width: 40px;
+  .menu_options li:hover > ul {
+    display: block;
   }
 
-  .header__menu--profile {
-    margin-right: 8px;
-    display: flex;
-    vertical-align: middle;
-  }
-  .header__menu--profile img {
-    margin-right: 8px;
-    width: 40px;
-  }
-  .header__menu--profile p {
-    margin: 0px;
-    color: white;
-  }
+
   .main {
     height: 200px;
     display: flex;
@@ -258,13 +252,43 @@ body {
   .register__container--form {
     display: flex;
     flex-direction: column;
+
+  
   }
+
+  .register__container--form a {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Mulish", sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    text-decoration: none;
+    display: grid;
+  }
+
   .carousel {
     width: 100%;
     overflow: scroll;
     padding: 30px;
     position: relative;
   }
+
+  .carousel::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+
+  .carousel::-webkit-scrollbar-thumb {
+    background-color: #ff9d00;
+    border-radius: 5px;
+  }
+
   .carousel__container {
     white-space: nowrap;
     margin: 70px;
@@ -422,23 +446,34 @@ body {
 
   .user_options{
     background-color: #00064d;
-    padding: 10px 50px 20px;
     width: 140px;
     height: 500px;
     flex-direction: row-reverse;
+    display: block;
   }
 
-  .user_options a{
+  .user_options ul, ol {
+    list-style:none;
+  }
+
+  .user_options li a{
     text-decoration: none;
     color: #fefefe;
-    font-size: 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
+    /*border-radius: 25px;*/
     font-family: "Mulish", sans-serif;
-    height: 50px;
-    letter-spacing: 1px;
-    margin: auto;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    
+
+  }
+
+  .user_options > li {
+    float: left;
+  }
+
+  .user_options a:hover {
+    background-color: #ff9d00;
   }
 
   .window {
@@ -450,8 +485,9 @@ body {
     height: 500px;
     width: 900px;
     margin-left: 200px;
-    margin-top: -250px;
+    margin-top: -500px;
     vertical-align: middle;
+    overflow: scroll;
   }
 
   .window__profile{
@@ -532,9 +568,32 @@ body {
 
   .window::-webkit-scrollbar {
     width: 7px;
-    background-color: #00064d;
+    background-color: rgba(255, 255, 255, 0);
   }
 
   .window::-webkit-scrollbar-thumb {
     background: #ff9d00;
+    border-radius: 5px;
   }
+
+  .window::-webkit-scrollbar-button {
+    background-color: rgba(0, 0, 128, 0);
+}
+
+  .window::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff9d00;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0);
+}
